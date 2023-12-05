@@ -8,26 +8,29 @@ const Register = () => {
                 <div className="">
                     <form>
                         <div>
-                            <div className="">
-                                <p>UserName</p>
+                            <div className="pt-4">
+                                <p className="pb-1">UserName</p>
                                 <input
                                     type="text"
-                                    className="w-full text-black"
+                                    className="w-full text-white bg-transparent border-[1px] border-[#363636] outline-none p-1 rounded-lg"
                                 />
                             </div>
-                            <div className="">
-                                <p>UserName</p>
+                            <div className="pt-4">
+                                <p className="pb-1">Email</p>
                                 <input
                                     type="email"
-                                    className="w-full text-black"
+                                    className="w-full text-white bg-transparent border-[1px] border-[#363636] outline-none p-1 rounded-lg"
                                 />
                             </div>
-                            <div className="">
-                                <p>UserName</p>
+                            <div className="pt-4">
+                                <p className="pb-1">Password</p>
                                 <input
                                     type="password"
-                                    className="w-full text-black"
+                                    className="w-full text-white bg-transparent border-[1px] border-[#363636] outline-none p-1 rounded-lg"
                                 />
+                            </div>
+                            <div className="pt-4">
+                                <button className="bg-blue-500 w-full p-1 uppercase rounded-lg">Register</button>
                             </div>
                         </div>
                     </form>
