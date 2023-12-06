@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.content-chat .my > div {
+    background-color: #0084ff;
+    padding: 0.2em 0.5em;
+    border-radius: 6px;
+}
+.content-chat .friend > div {
+    background-color: rgb(113, 114, 113);
+    padding: 0.2em 0.5em;
+
+    border-radius: 6px;
+}

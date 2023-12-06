@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
-import { FaFacebookMessenger } from "react-icons/fa6";
+import { FaFacebookMessenger, FaRegUser } from "react-icons/fa6";
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
 const Navbar = () => {
+    const { user, logoutUser } = useContext(AuthContext);
     return (
         <>
             <nav className="py-4 bg-gray-700 text-white">
@@ -21,12 +24,30 @@ const Navbar = () => {
                                 </span>
                             </div>
                             <ul className="flex items-center gap-4">
-                                <li>
-                                    <Link to="/login">Login</Link>
-                                </li>
-                                <li>
-                                    <Link to="/register">Register</Link>
-                                </li>
+                                {user ? (
+                                    <>
+                                        <li className="flex items-center gap-2">
+                                            <FaRegUser /> {user?.name}
+                                        </li>
+                                        <li className="border-2 border-cyan-900 rounded-lg cursor-pointer py-1 px-3">
+                                            <Link
+                                                to="/login"
+                                                onClick={() => logoutUser()}
+                                            >
+                                                Logout
+                                            </Link>
+                                        </li>
+                                    </>
+                                ) : (
+                                    <>
+                                        <li>
+                                            <Link to="/login">Login</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/register">Register</Link>
+                                        </li>
+                                    </>
+                                )}
                             </ul>
                         </div>
                     </div>
